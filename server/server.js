@@ -7,7 +7,7 @@
 	const app = express();
 	app.use(morgan('tiny'));
 	app.use(bodyParser.json());
-	app.use(express.static('../client-app'));
+	app.use(express.static(__dirname + '/../client'));
 
 	// Aqui quedaria el apiRest del proyecto
 	app.get('/api', (req, res) => 
