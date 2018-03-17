@@ -2,8 +2,7 @@
 'use strict';
 
 angular.module('yogaAcademy', ['ui.router', 'ngAnimate'])
-.config(AppConfig)
-.controller('mainMenuController', MainMenuController);
+.config(AppConfig);
 
 AppConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 function AppConfig($stateProvider, $urlRouterProvider){
