@@ -4,7 +4,7 @@ Una demostración simple de como trabaja una SinglePageApp.
 
 ## Para ver online
 
-	El ejemplo se encuetra disponible [aqui](https://ofmoreno06.github.io/YogAcademy/client)
+El ejemplo se encuetra disponible [aqui](https://ofmoreno06.github.io/YogAcademy/client)
 
 ## Para ejecutar en maquina local
 
