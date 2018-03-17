@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="yogaAcademy">
+<head>
+	<meta charset="UTF-8">
+	<title>Yoga Academy</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<!-- ======================== -->				
+	<!-- MAIN MENU -->				
+	<!-- ======================== -->				
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" ng-controller="mainMenuController">
+		<a class="navbar-brand" ui-sref="inicio">AquiSuperLogo</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" ui-sref="inicio">Inicio </a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" ui-sref="cursos">Cursos</a>
+				</li>
+			</ul>
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" ui-sref="login">Entrar </a>
+				</li>
+			</ul>
+
+		</div>
+	</nav>	
+	
+	<!-- ======================== -->				
+	<!-- UI ROUTER MAIN VIEW -->				
+	<!-- ======================== -->				
+	<div class="ui-view"></div>
+
+	<!-- ======================== -->				
+	<!-- SCRIPTS -->				
+	<!-- ======================== -->				
+	<script src="lib/angular.js"></script>
+	<script src="lib/ui-router.js"></script>
+	<script src="lib/angular-animate.js"></script>
+	<script src="app/app.js"></script>
+
+	<!-- CONTROLLERS -->				
+	<script src="app/components/inicio/inicio.controller.js"></script>
+	<script src="app/components/cursos/cursos.controller.js"></script>
+	<script src="app/components/cursos/cursos-detalle.controller.js"></script>
+	<script src="app/components/login/login.controller.js"></script>
+	
+</body>
+</html>

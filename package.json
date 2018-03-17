@@ -1,0 +1,23 @@
+{
+  "name": "demo-spa",
+  "version": "1.0.0",
+  "description": "muestra de como trabaja una SinglePageApp",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "spa",
+    "angularjs",
+    "single",
+    "page",
+    "application"
+  ],
+  "author": "oscar moreno",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0"
+  }
+}
