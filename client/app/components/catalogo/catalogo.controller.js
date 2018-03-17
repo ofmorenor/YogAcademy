@@ -1,18 +1,22 @@
 (function(){
 	'use strict';
 	angular.module('yogaAcademy')
-	.controller('cursosController', CursosController);
+	.controller('catalogoController', CatalogoController);
 
-	CursosController.$inject = ['courseId'];
-	function CursosController(courseId){
+	CatalogoController.$inject = []; // para protejer de minification
+	function CatalogoController(){
 		const ctrl = this;
 		
+		// Esta funcion se ejecuta al iniciar el controlador
+		// Aqui es donde se llama al servidor para traer
+		// los datos que se van a mostrar
 		ctrl.$onInit = function(){
-			ctrl.course = getFakeCoursesData(courseId);
+			ctrl.courses = getFakeCoursesData();
 		}
-
-		function getFakeCoursesData(id){
-			const courses = [
+		
+		// Esto deberia ser proporcionado por un 'servicio' 
+		function getFakeCoursesData(){
+			return [
 				{
 					id: 1,
 					name: 'Curso 1',
@@ -38,8 +42,6 @@
 					duration: '4 semanas'
 				}
 			];
-			return courses[id - 1];
 		}
-
 	}
 })();

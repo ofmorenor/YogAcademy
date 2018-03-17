@@ -9,22 +9,25 @@ function AppConfig($stateProvider, $urlRouterProvider){
 	$urlRouterProvider.otherwise('inicio');
 
 	$stateProvider
-		.state('inicio',{
+		.state('inicio', {
 			url: '/inicio',
 			templateUrl: './app/components/inicio/inicio.template.html',
 			controller: 'inicioController as ctrl'
 		})
-		.state('cursos',{
-			url: '/cursos',
+		.state('catalogo', {
+			url: '/catalogo',
+			templateUrl: './app/components/catalogo/catalogo.template.html',
+			controller: 'catalogoController as ctrl'
+		})
+		.state('cursos', {
+			url: '/cursos/{courseId}',
 			templateUrl: './app/components/cursos/cursos.template.html',
-			controller: 'cursosController as ctrl'
+			controller: 'cursosController as ctrl',
+			resolve: { 
+				courseId: ['$stateParams', function($stateParams){ return $stateParams.courseId } ]
+			}
 		})
-		.state('cursos.detalle',{
-			url: '/:id',
-			templateUrl: './app/components/cursos/cursos-detalle.template.html',
-			controller: 'cursosDetalleController as ctrl'
-		})
-		.state('login',{
+		.state('login', {
 			url: '/login',
 			templateUrl: './app/components/login/login.template.html',
 			controller: 'loginController as ctrl'

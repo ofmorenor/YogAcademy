@@ -1,0 +1,17 @@
+<h1>Nuestra oferta de cursos</h1>
+
+<section class="container">
+	<div class="card-deck">
+		<div class="card" ng-repeat="course in ctrl.courses">
+			<img class="card-img-top" src="http://via.placeholder.com/286x180" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title">{{ course.title }}</h5>
+				<p class="card-text">{{ course.description }}</p>
+				<a class="btn btn-primary" ui-sref="cursos({courseId: course.id })">Ver más</a>
+				<p class="card-text"><small class="text-muted">Duración: {{ course.duration }}</small></p>
+			</div>
+		</div>		
+	</div>
+</section>
+
+<div class="ui-view"></div>
