@@ -12,7 +12,7 @@ function AppConfig($stateProvider, $urlRouterProvider){
 	$stateProvider
 		.state('inicio',{
 			url: '/inicio',
-			templateUrl: '/app/components/inicio/inicio.template.html',
+			templateUrl: '/.app/components/inicio/inicio.template.html',
 			controller: 'inicioController as ctrl'
 		})
 		.state('cursos',{
@@ -31,14 +31,5 @@ function AppConfig($stateProvider, $urlRouterProvider){
 			controller: 'loginController as ctrl'
 		});
 };
-
-MainMenuController.$inject = ['$location', '$rootScope'];
-function MainMenuController(serverService, $location, $rootScope){
-	const ctrl = this;
-	
-	ctrl.$onInit = function(){
-		ctrl.isNavCollapsed = true;
-	}
-}
 
 })();
