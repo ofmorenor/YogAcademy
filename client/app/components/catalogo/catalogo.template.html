@@ -5,7 +5,7 @@
 		<div class="card" ng-repeat="course in ctrl.courses">
 			<img class="card-img-top" src="http://via.placeholder.com/286x180" alt="Card image cap">
 			<div class="card-body">
-				<h5 class="card-title">{{ course.title }}</h5>
+				<h5 class="card-title">{{ course.name }}</h5>
 				<p class="card-text">{{ course.description }}</p>
 				<a class="btn btn-primary" ui-sref="cursos({courseId: course.id })">Ver más</a>
 				<p class="card-text"><small class="text-muted">Duración: {{ course.duration }}</small></p>
